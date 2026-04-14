@@ -2,7 +2,7 @@
 
 A real Python library for AI-powered seismic data analysis built on the **Forge 2D Survey (2017)** dataset.
 
-## Modules
+## We have Selected these Modules #1 and #2
 
 | Package | PyPI name | Description |
 |---|---|---|
@@ -10,11 +10,6 @@ A real Python library for AI-powered seismic data analysis built on the **Forge 
 | `seismoai_viz` | `seismoai-viz` | Gather images, trace waveforms, frequency spectra |
 ---
 
-## Installation
-
-```bash
-pip install seismoai-io seismoai-viz
-```
 
 ---
 
