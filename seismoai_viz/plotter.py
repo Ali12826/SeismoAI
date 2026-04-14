@@ -103,7 +103,7 @@ def plot_gather(
         cmap=cmap,
         vmin=-clip,
         vmax=clip,
-        extent=[1, n_traces, time_axis_ms[-1], time_axis_ms[0]],
+        extent=(1, n_traces, float(time_axis_ms[-1]), float(time_axis_ms[0])),
         interpolation="bilinear",
     )
     ax.set_xlabel("Trace Number", fontsize=12)

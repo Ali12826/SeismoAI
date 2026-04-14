@@ -8,10 +8,6 @@ A real Python library for AI-powered seismic data analysis built on the **Forge 
 |---|---|---|
 | `seismoai_io` | `seismoai-io` | Load SGY files, batch loading, normalization |
 | `seismoai_viz` | `seismoai-viz` | Gather images, trace waveforms, frequency spectra |
-| `seismoai_qc` | `seismoai-qc` | Dead / noisy trace detection, QC reports |
-| `seismoai_model` | `seismoai-model` | Feature extraction, noise classifier |
-| `seismoai_xai` | `seismoai-xai` | SHAP values, feature importance, trace explanation |
-
 ---
 
 ## Installation
@@ -22,7 +18,7 @@ pip install seismoai-io seismoai-viz
 
 ---
 
-## Quick Start
+## Main Code
 
 ```python
 from seismoai_io import load_sgy, normalize_traces
@@ -92,7 +88,7 @@ pytest tests/ -v --tb=short
 ## Development Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/seismoai.git
+git clone https://github.com/Ali1/2826/seismoai.git
 cd seismoai
 pip install -e ".[dev]"
 ```
