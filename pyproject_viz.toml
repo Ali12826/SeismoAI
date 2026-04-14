@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+# ── seismoai-viz ───────────────────────────────────────────────────────────
+[project]
+name = "seismoai-viz"
+version = "0.1.0"
+description = "Visualization module for the seismoai seismic-data processing library"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+    { name = "Partner Name", email = "partner@example.com" },
+]
+keywords = ["seismic", "visualization", "geophysics", "matplotlib", "seismoai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seismoai-io>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/seismoai"
+Repository = "https://github.com/YOUR_USERNAME/seismoai"
+
+[tool.setuptools.packages.find]
+include = ["seismoai_viz*"]
