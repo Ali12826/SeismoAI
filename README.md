@@ -13,7 +13,7 @@ A real Python library for AI-powered seismic data analysis built on the **Forge 
 
 ---
 
-## Main Code
+## Main Code that i used Main.py
 
 ```python
 from seismoai_io import load_sgy, normalize_traces
