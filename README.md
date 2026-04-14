@@ -112,3 +112,4 @@ recorded with an INOVA Geophysical Hawk system.
 
 ## License
 MIT
+# SeismoAI
