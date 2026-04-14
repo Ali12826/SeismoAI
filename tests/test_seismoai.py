@@ -15,7 +15,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import numpy as np
-import pytest
+import pytest  # type: ignore
 
 # ── helpers ─────────────────────────────────────────────────────────────────
 
@@ -239,7 +239,7 @@ class TestNormalizeTraces:
         from seismoai_io import normalize_traces
 
         with pytest.raises(ValueError, match="method must be"):
-            normalize_traces(_make_traces(), method="l2")
+            normalize_traces(_make_traces(), method="l2")  # type: ignore
 
     def test_dead_trace_no_nan(self):
         """A zero-amplitude dead trace should not produce NaN (eps guard)."""
@@ -257,7 +257,8 @@ class TestNormalizeTraces:
 import matplotlib
 
 matplotlib.use("Agg")  # non-interactive backend for CI
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  # noqa: E402
+from matplotlib.figure import Figure
 
 
 @pytest.fixture(autouse=True)
@@ -274,7 +275,7 @@ class TestPlotGather:
         from seismoai_viz import plot_gather
 
         fig = plot_gather(_make_traces())
-        assert isinstance(fig, plt.Figure)
+        assert isinstance(fig, Figure)
 
     def test_raises_on_1d_input(self):
         from seismoai_viz import plot_gather
@@ -313,7 +314,7 @@ class TestPlotTrace:
         from seismoai_viz import plot_trace
 
         fig = plot_trace(_make_traces(), trace_index=0)
-        assert isinstance(fig, plt.Figure)
+        assert isinstance(fig, Figure)
 
     def test_raises_on_1d_input(self):
         from seismoai_viz import plot_trace
@@ -354,7 +355,7 @@ class TestPlotTrace:
 
         traces = _make_traces(n_traces=10)
         fig = plot_trace(traces, trace_index=9)
-        assert isinstance(fig, plt.Figure)
+        assert isinstance(fig, Figure)
 
 
 class TestPlotSpectrum:
@@ -364,7 +365,7 @@ class TestPlotSpectrum:
         from seismoai_viz import plot_spectrum
 
         fig = plot_spectrum(_make_traces())
-        assert isinstance(fig, plt.Figure)
+        assert isinstance(fig, Figure)
 
     def test_raises_on_1d_input(self):
         from seismoai_viz import plot_spectrum

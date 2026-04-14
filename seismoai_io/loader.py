@@ -13,7 +13,7 @@ from typing import Dict, Literal, Union
 import numpy as np
 
 try:
-    import segyio
+    import segyio  # type: ignore
 except ImportError as exc:  # pragma: no cover
     raise ImportError(
         "segyio is required by seismoai_io. Install it with: pip install segyio"
