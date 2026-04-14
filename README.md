@@ -95,7 +95,7 @@ pip install -e ".[dev]"
 
 ---
 
-## Dataset
+## Dataset Used
 
 The SGY files are from the **Forge 2D seismic survey** (Utah, USA, 2017),
 recorded with an INOVA Geophysical Hawk system.
