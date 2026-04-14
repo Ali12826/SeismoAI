@@ -29,7 +29,7 @@ def load_sgy(
     filepath: Union[str, Path],
     *,
     ignore_geometry: bool = True,
-    dtype: np.dtype = np.float32,
+    dtype: np.dtype = np.dtype(np.float32),
 ) -> np.ndarray:
     """Load a single SEG-Y file and return its traces as a 2-D NumPy array.
 
@@ -96,7 +96,7 @@ def load_sgy_folder(
     *,
     extensions: tuple[str, ...] = (".sgy", ".segy"),
     ignore_geometry: bool = True,
-    dtype: np.dtype = np.float32,
+    dtype: np.dtype = np.dtype(np.float32),
     verbose: bool = True,
 ) -> Dict[str, np.ndarray]:
     """Load every SEG-Y file in a directory and return them as a dictionary.
